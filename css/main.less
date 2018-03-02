@@ -11,7 +11,51 @@
 @base1: #93a1a1;
 
 // Accent
+@yellow: #b58900;
 @green: #859900;
+@orange: #cb4b16;
 
 // Link
-@blue: #268b62;
+@blue: #268bd2;
+
+::-moz-selection {
+  color: @base3;
+  background-color: @green;
+}
+::selection {
+  color: @base3;
+  background-color: @green;
+}
+
+body {
+  background-color: @base2;
+  color: @base00;
+  font-family: "Inconsolata", monospace;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 650px;
+  padding: 15px;
+  background-color: @base3;
+}
+
+h1 {
+  color: @green;
+}
+
+h3 {
+  color: @base01;
+}
+
+a {
+  color: @blue;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  color: @base01;
+  font-weight: bold;
+}
