@@ -11,32 +11,29 @@
 @base1: #93a1a1;
 
 // Accent
-@yellow: #b58900;
-@green: #859900;
-@orange: #cb4b16;
-@red: #dc322f;
-@magenta: #d33682;
+@accent: #d33682;
 
 // Link
-@blue: #268bd2;
+@link: #268bd2;
+
+.color(@color; @bg-color) {
+  color: @color;
+  background-color: @bg-color;
+}
 
 ::-moz-selection {
-  color: @base2;
-  background-color: @magenta;
+  .color(@base2, @accent);
 }
 ::selection {
-  color: @base2;
-  background-color: @magenta;
+  .color(@base2, @accent);
 }
 
 .light {
-  background-color: @base3;
-  color: @base01;
+  .color(@base01, @base3);
 }
 
 .dark {
-  background-color: @base03;
-  color: @base1;
+  .color(@base1, @base03);
 }
 
 body {
@@ -45,12 +42,10 @@ body {
   flex-direction: column;
   align-items: center;
   &.light {
-    background-color: @base2;
-    color: @base00;
+    .color(@base00; @base2);
   }
   &.dark {
-    background-color: @base02;
-    color: @base0;
+    .color(@base0, @base02);
   }
 }
 
@@ -60,7 +55,7 @@ body {
 }
 
 h1 {
-  color: @magenta;
+  color: @accent;
 }
 
 h3 {
@@ -73,7 +68,7 @@ h3 {
 }
 
 a {
-  color: @blue;
+  color: @link;
 }
 
 .footer {
