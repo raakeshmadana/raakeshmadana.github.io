@@ -3,8 +3,7 @@ function toggleClass(element) {
   element.classList.toggle('light');
 }
 
-function switchColor(event) {
-  event.preventDefault();
+function switchColor() {
   toggleClass(document.getElementById('body'));
   toggleClass(document.getElementById('container'));
   toggleClass(document.getElementById('subhead'));
