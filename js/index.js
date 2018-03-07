@@ -25,8 +25,10 @@ function setColorScheme() {
   var hours = date.getHours();
   if (hours > 8 && hours < 18) {
     setClass('light');
+    document.getElementById('switch').innerText = 'dark';
   } else {
     setClass('dark');
+    document.getElementById('switch').innerText = 'light';
   }
 }
 
