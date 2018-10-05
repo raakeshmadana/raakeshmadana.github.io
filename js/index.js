@@ -6,7 +6,6 @@ function toggleClass(element) {
 function switchColor() {
   toggleClass(document.getElementById('body'));
   toggleClass(document.getElementById('container'));
-  toggleClass(document.getElementById('subhead'));
   if (this.innerText == 'dark') {
     this.innerText = 'light';
   } else {
@@ -17,13 +16,12 @@ function switchColor() {
 function setClass(cls) {
   document.getElementById('body').classList.add(cls);
   document.getElementById('container').classList.add(cls);
-  document.getElementById('subhead').classList.add(cls);
 }
 
 function setColorScheme() {
   var date = new Date();
   var hours = date.getHours();
-  if (hours > 8 && hours < 18) {
+  if (hours > 8 && hours < 20) {
     setClass('light');
     document.getElementById('switch').innerText = 'dark';
   } else {
